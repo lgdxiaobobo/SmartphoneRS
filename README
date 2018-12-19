@@ -1,0 +1,27 @@
+Codes for smart-phone recommendation
+
+-Preprocess is mainly for preprocess raw dataset
+    including:
+        1. filter out invalid dataset
+            e.g. invalid datetime, invalid cell-id or invalid tac
+        2. simple static analysis
+        3. divide dataset into residence and workplace candidates based on regristration period
+-GraphBuilder 
+    Characters:
+        1. determine sementic location for both residence and workplace
+        2. HND method to build network
+-EvalGraph
+    Charaters:
+        1. evaluate the network and common ratio in our sementic location based network
+        2. compare the network and common ratio for popular and random recommending
+-NaiveTest
+    Charaters:
+        user-based recommendation with mllib.ALS
+-Models
+    Charaters:
+        1. baselines for comparing
+            1.1 item2item
+            1.2 basic CF
+            1.3 CF adding negative feedback
+            1.4 BPR
+        2. proposed hybrid model
